@@ -17,6 +17,9 @@ Including another URLconf
 from django.urls import path
 from .views import home,products,perfil,exit,register,about,agregar_producto,restar_producto,eliminar_producto,limpiar_carrito
 
+from django.conf import settings
+from django.contrib.staticfiles.urls import static
+
 urlpatterns = [
     path('', home, name='home'),
     path('products/', products, name='products'),
@@ -28,4 +31,4 @@ urlpatterns = [
     path('eliminar/<int:producto_id>/', eliminar_producto, name="Del"),
     path('restar/<int:producto_id>/', restar_producto, name="Sub"),
     path('limpiar/', limpiar_carrito, name="CLS"),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

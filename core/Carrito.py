@@ -18,6 +18,7 @@ class Carrito:
                 "nombre": producto.nombre,
                 "acumulado": producto.precio,
                 "cantidad": 1,
+                "precio": producto.precio,
             }
         else:
             self.carrito[id]["cantidad"] += 1

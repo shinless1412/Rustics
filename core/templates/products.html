@@ -65,31 +65,35 @@
     <br>
       <h1>Bienvenido a tu tienda Rustica</h1>
       <br>
-      <table class="table table-striped card-color table-margin"> 
-        <thead>
-          <tr>
-            <th scope="col">Cerveza</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Descripcion</th>
-            <th scope="col">Precio</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
+      <div style="display: flex; justify-content: center;">
+        <table class="table table-striped card-color table-margin"> 
+          <thead>
+            <tr>
+              <th scope="col">Cerveza</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">Precio</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
             {% for producto in productos %}
-            <th >
-            <img src="{{producto.image}}">
-          </th>
-          <td>{{producto.nombre}}</td>
-            <td>{{producto.descripcion}}</td>
-            <td>${{producto.precio}}</td>
-            <td><a href="{% url 'Add' producto.id %}" class="btn btn-orange bi bi-cart ">Agregar</a>
-            </td>
+            <tr>
+              <td>
+                <img src="{{producto.imagen.url}}" height="400"/>
+              </td>
+              <td>{{producto.nombre}}</td>
+              <td>{{producto.descripcion}}</td>
+              <td>${{producto.precio}}</td>
+              <td><a href="{% url 'Add' producto.id %}" class="btn btn-orange bi bi-cart">Agregar</a></td>
+            </tr>
             {% endfor %}
-          </tr>
-        </tbody>
-      </table>
-            <div class= "col-4">
+          </tbody>
+        </table> 
+        <br>
+        <br>
+        <br>  
+        <div style="display: flex; justify-content: center;">
               {% include "carrito.html" %}
             </div>
           </div>

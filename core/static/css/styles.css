@@ -247,9 +247,9 @@ p {
 
 .table-margin {
   margin: 10px;
+  width: 60%;
+  padding: 12px;
+  font-size: 22px
 }
 
-.table-margin th,
-.table-margin td {
-  padding: 8px; /* Ajusta el valor según tus necesidades */
-}
+  

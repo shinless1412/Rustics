@@ -1,11 +1,11 @@
-  <table class="table table-bordered card-color">
+  <table class="table table-striped card-color table-margin"> 
     <thead>
       <tr>
         <th scope="row" colspan="3" class="text-center">CARRITO</th>
       </tr>
       <tr>
         <th scope="col">NOMBRE</th>
-        <th scope="col">PRECIO</th>
+        <th scope="col">Subtotal</th>
         <th scope="col">CANTIDAD</th>
       </tr>
     </thead>
@@ -14,8 +14,8 @@
     {% for key, value in request.session.carrito.items %}
       <tr>
         <td>{{value.nombre}}</td>
-        <td>{{value.precio}}</td>
-        <td>{{value.acumulado}}
+        <td>${{value.acumulado}}</td>
+        <td>{{value.cantidad}}
           <a href="{% url 'Add' value.producto_id %}" class="badge btn btn-dark badge-dark">+</a>
           <a href="{% url 'Sub' value.producto_id %}" class="badge btn btn-dark badge-dark">-</a>
         </td>
