@@ -1,0 +1,458 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>Rustica</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/icono.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+    <script src="{% static 'js/script.js' %}"></script>
+    
+    
+    
+</head>
+  
+<body class="fondo">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+    <h1></h1>
+    <div class="head">
+
+        <div class="logo">
+            <table>
+                <tr>
+                    <td><a href="#"><img src="{% static 'img/logo2.png' %}" height="100%" width="100%" alt="logonumero2"></a></td>
+                    <td>
+                        <p class="Nombrelogo">Rustica</p>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <nav class="navbar">
+            <a href="#">Inicio</a>
+            <a href="#Productos">Productos</a>
+            <a href="#Nosotros">Nosotros</a>
+            <a href="#Valores">Valores</a>
+            <a href="#Contacto">Contacto</a>
+
+        </nav>
+    </div>
+
+    <form class="formulario-login" action="">
+        <h1 class="tittle">Login</h1>
+        <table>
+            <tr>
+                <td>
+                    <label>
+                        <i class="icono bi bi-person-fill"></i>
+                    </label>
+                </td>
+                <td>
+                    <input type="text" id="username" placeholder="Usuario">
+                </td>
+                <td><a href="#" class="enlace btn-enlace">¿Aun no tienes cuenta? ¡Registrate!
+                    </a></td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <label>
+                        <i class="icono bi bi-lock-fill"></i>
+                    </label>
+                </td>
+                <td>
+                    <input type="passsword" id="password" placeholder="Contraseña">
+                </td>
+                <td>
+                    <a href="#" class="enlace">¿Quieres recuperar tu contraseña?</a>
+                </td>
+            </tr>
+            
+        </table><center>
+            
+            <p>
+                <a id="button" class="boton btn-login">Login</a>
+            </p>
+        </center>
+
+        
+
+
+
+    </form>
+
+
+    <header class="content header">
+
+        <h2 class="title">Cerveza Rustica</h2>
+
+        <p>
+            ¿Qué cervezas son artesanales?
+            Dentro de la variedad de estilos que existe en el mundo cervecero destacan cinco que han ido ganando adeptos
+            entre los amantes de las artesanales.
+            Nos referimos a las cervezas IPA, Porter, Amber,
+            Pale Ale y el Stout. Conoce sus características y con qué platillos combinan mejor.
+        </p>
+
+        <div class="boton btn-home">
+            <a href="javascript:void(0)" class="btn" onclick="openModal()">Saber más</a>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <p>
+                        La cerveza es un líquido de malta dulce o fermentada saborizada con lúpulo, fabricada de forma
+                        natural. Sus principales ingredientes son cebada, lúpulo, levadura y agua, y el agua con que se
+                        la prepara debe ser pura, estéril y potable. Contiene también cebada, que debe ser germinada,
+                        secada y tostada, el lúpulo, que le da aroma amargo, y la levadura, que permite su fermentación.
+                        Acompaña muy bien las comidas por su sabor amargo y contenido carbónico, y tiene además
+                        propiedades medicinales: es antioxidante y protege las células de su degradación.
+
+                        El amor por la bebida es tal, que todos los 2 de agosto se celebra su existencia: el Día
+                        Internacional de la Cerveza. La moción surgió entre amigos en una mesa de un pequeño bar de
+                        Santa Cruz, en California, allá por el 2007, y tuvo tantos adeptos que el festejo se hizo masivo
+                        por todo el mundo, incluyendo 207 ciudades, 50 países y 6 continentes. ¡La cifra y el amor por
+                        la bebida seguirá subiendo!
+                        Eureka
+                        Su origen de la cerveza data de 4 mil a.C, en la zona de la Mesopotamia del Oriente Medio, hace
+                        más de siete mil años. La evidencia más antigua es una tablilla en la que se observan varias
+                        personas tomando cerveza de un mismo recipiente. Los Babilonios heredaron de ellos las tareas
+                        del cultivo de la tierra y la elaboración de cerveza en una tabla de arcilla, la cual explica su
+                        fórmula de elaboración.
+
+                        <br><img src="{% static 'historia/cerveza_egipto.jpg' %}" alt="fotohistoria1"><br>
+
+                        (Representación de un sirio tomando cerveza egipcia).
+                        Su descubrimiento fue accidental: se mezcló agua con cereales y sucedió el milagro. Como
+                        resultado los sumerios humedecían el pan con agua y la levadura fermentaba la mezcla que la
+                        convertía en bebida alcohólica. Se producía un ritual en el que la gente se unía. La historia de
+                        la cerveza es también la de la agricultura: los asentamientos se forjaban alrededor de los
+                        cultivos. Lo relevante es que era un alimento ya que tenía una fuente de azúcar difícil de
+                        conseguir.
+
+                        Su deidad de la cerveza era la Diosa Ninkasi.
+
+                        <br><img src="{% static 'historia/sumerios.jpg' %}" alt="fotohistoria2"><br>
+
+                        (Los sumerios.Fuente: Historia de las civilizaciones).
+
+                        La bebida del pueblo
+                        En Egipto la denominaron “zythum” y era esencial en la dieta cotidiana. Mientras que el vino era
+                        para las clases altas, la cerveza era para el pueblo. En época de los faraones, sus fábricas
+                        producían hasta 4 millones de litros por año, tanto, que los graneros estaban prácticamente
+                        destinados a la cebada para su elaboración y la utilizaban como moneda de cambio. Los egipcios
+                        fueron los primeros en mercantilizar la cerveza.
+
+                        Como buenos comerciantes, dado que el precio este cereal era elevado, utilizaban una variedad
+                        del trigo: la espelta. Además descubrieron la malta, le agregaron azafrán, miel, jengibre y
+                        comino para darle sabor y color.
+
+                        <br><img src="{% static 'historia/cerveza_en_egipto3.jpg' %}" alt="fotohistoria3"><br>
+
+                        (En egipto llamaban a la cerveza “zythum”. Era esencial en la dieta cotidiana).
+
+                        La expansión
+                        Los griegos heredaron las técnicas de fabricación de cerveza de los elaboradores de Egipto, y a
+                        su vez traspasaron este conocimiento a los romanos, que la llamaron "cerevisia", en honor de la
+                        diosa Ceres de la agricultura.
+
+                        Una vez extendida, se utilizaban los granos de cereales disponibles de cada zona: en China el
+                        trigo, en Rusia el centeno y en Japón, el arroz. De allí surge el sake, que es considerada la
+                        cerveza más antigua utilizada en ritos sociales en honor a los dioses. En la Antigüedad, en
+                        China también se elaboraba cerveza llamada "kiu", utilizando cebada, trigo, espelta, mijo y
+                        arroz, mientras que las civilizaciones precolombinas de América utilizaban maíz en lugar de
+                        cebada.
+
+                        La cerveza de cebada proviene de Europa, trasladándose desde Armenia, Georgia y el sur de Rusia
+                        hasta Bohemia, Alemania, Bélgica y las Islas Británicas, donde se convertiría en aquella cerveza
+                        que conocemos en la actualidad.
+
+                        <br><img src="{% static 'historia/cerveceros_soria.jpg' %}" alt="fotohistoria4"><br>
+
+                        (Cerveceros de Soria, España).
+
+                        ¿Cómo se prepara la cerveza?
+                        Sus cuatro ingredientes principales son: agua, cebada, levadura y lúpulo. Se puede utilizar
+                        cualquiera de estos cereales para fabricarla: cebada, trigo, maíz, centeno o arroz. Se le añade
+                        lúpulo, hierbas, frutas o chocolate. El primer paso de producción es el malteado del grano de
+                        cebada que se mezcla con agua para que germine y se descompongan los almidones para que
+                        aparezcan los azúcares. Se calienta el grano para frenar su germinado. El secado de la malta
+                        produce sabores y colores que formarán parte del producto final. Dependiendo del tipo de secado
+                        se producirán diferentes tipos de sabores.
+
+                        Se muele la malta y se mezcla con agua caliente para su maceración durante una hora, tiempo en
+                        el que se desprenden sus azúcares. Para el resultado final influye el tipo de agua utilizada,
+                        que debe ser pura. Se procesa el líquido macerado y se lo cuece con lúpulo, que actúa como
+                        conservante natural y le da el sabor característico. El tipo de lúpulo incide en el sabor y
+                        aroma, además de mejorar la espuma, lo cual influye en su estética. Se añade levadura, organismo
+                        vivo, que consume el azúcar y lo convierte en alcohol. Al pasar la cerveza por una doble
+                        fermentación esto le da sus características burbujas.
+
+                        Todas las cervezas son fabricadas de la misma manera, la diferencia de sabor, textura y color
+                        reside en el cereal utilizado. Con distintos tipos de levadura se consigue un sabor y aroma
+                        distinto. El proceso puede durar días o meses y los cambios de clima y temperatura influyen en
+                        el resultado final.
+
+                        <br><img src="{% static 'historia/madrid_fabrica_de_cerveza_el_aguila.jpg' %}" alt="fotohistoria5"><br>
+
+                        Cerveza en todo el mundo
+                        En el Norte de Europa se consumía como pan líquido por los azúcares y nutrientes. Era elaborada
+                        por mujeres en pequeñas cantidades porque no se podía conservar. En los monasterios la
+                        producción a gran escala fue en el Siglo X. Los monjes, vinculados a la agricultura,
+                        perfeccionaron sus recetas con los escritos de los egipcios, estudiando el proceso y
+                        mejorándolo. Empezaron a usar el lúpulo, marcando el fin de cervezas turbias y dulces.
+
+                        El lúpulo, planta trepadora, funcionaba conservante y era de fácil acceso. Actualmente se
+                        cultivan de diferentes variedades por todo el mundo. Produce un sabor amargo, transparencia y
+                        espuma. Comenzó a fabricarse en Alemania y en Europa Continental.
+
+                        En España, la cerveza fue popularizada en el siglo XVI por Carlos I de España y V de Alemania,
+                        tras su retirada al Monasterio de Yuste. El emperador instaló una pequeña fábrica de esta bebida
+                        en el monasterio, al que le había acompañado un maestro cervecero.
+
+                        <br><img src="{% static 'historia/monjes-cerveza.jpg' %}" alt="fotohistoria6"><br>
+
+                        Sapporo es el hogar de la cerveza japonesa. En 1876 aparece la primera fábrica, utilizando la
+                        alemana como inspiración. A pesar del éxito de Sapporo, las más populares son las importadas.
+
+                        Pero la auténtica época dorada de la cerveza comienza a finales del siglo XVIII, con la
+                        incorporación de la máquina de vapor a la industria cervecera y el descubrimiento de la nueva
+                        fórmula de producción en frío, y culmina en el último tercio del siglo XIX, con los hallazgos de
+                        Pasteur relativos al proceso de fermentación. Se basa en someter a la bebida a altas
+                        temperaturas durante un periodo de tiempo determinado, matando así bacterias y levaduras no
+                        deseadas, y también deteniendo el proceso de fermentación.
+
+                        <br><img src="{% static 'historia/grifo_WF6wCOv.jpg' %}" alt="fotohistoria7"><br>
+
+                        En Dublín, Irlanda, la cerveza negra seca del tipo stout fue elaborada por primera vez en 1759
+                        por el cervecero Arthur Guinness, en la empresa cervecera denominada St. James's Gate Brewery.
+
+                        El famoso Oktoberfest de Munich se remonta a 1810, en el casamiento del Príncipe Ludwig con la
+                        Princesa Teresa. Munich significa “el lugar del monje”. Accidentalmente crearon otro tipo de
+                        cerveza llamada Lager, la más popular en todo el mundo, mediante su almacenamiento en cuevas de
+                        hielo que creó otro tipo de levadura.
+                        Data de principios del siglo XIX por Gabriel Sedlmayr, pionero de la cerveza comercial que en
+                        1840 introdujo el sacarímetro, el termómetro y una máquina de vapor. La fábrica Spaten, de
+                        Sedlmayr hizo espionaje industrial en otras partes de Europa. Creó la cerveza de Munich cobriza.
+                        Joseph Grohl creó la primera Lager dorada en la ciudad de Pilsen (actual República Checa),
+                        utilizando una malta muy pálida creando la Lager Pilsen Pale.
+
+                        <br> <img src="{% static 'historia/poster.jpg' %}" alt="fotohistoria8"><br>
+
+                        oktoberfest
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </header>
+
+    <section id="Productos" class="conten sau">
+
+        <h2 class="title">Productos</h2>
+        <p>Para que una cerveza sea considerada artesanal, tiene que ser elaborada con ingredientes tradicionales o
+            innovadores.<br>
+            <br>
+            Nacida en el fecundo Valle de Casablanca. Rústica se caracteriza por tener un sabor y color único gracias a
+            su elaboración tradicional que solo algunos sabrán diferenciar.
+            Ingredientes: Agua, Lúpulo, Cebada, Levadura. KM 3 Hacienda Lo Orozco.
+            PRODUCTO SIN FILTRAR (el sedimento
+            del fondo de la botella es producto de la elaboración de la cerveza artesanal). <br>
+        </p>
+
+        <div class="box-container">
+
+
+        </div>
+
+       
+            
+            
+        </div>
+    </div>
+</div>
+
+           
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'img/cerveza1.png' %}" alt="fotocerveza1" data-bs-toggle="modal"
+        data-bs-target="#modalCerveza1">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p>¿Qué quiere decir India Pale Ale?
+            Indian: aunque su origen no fue
+            en el país asiático,
+            su principal desarrollo tuvo sus raíces allí.
+            Pale: debido al tipo de cereal que se utiliza,
+            maltas de color claro.
+            Ale: refiriéndose a una cerveza de alta fermentación,
+            un proceso en el que las levaduras
+            transforman los azúcares en alcoho</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/cerveza2.png' %}" alt="fotocerveza2" data-bs-toggle="modal"
+                data-bs-target="#modalCerveza2">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p>El estilo Stout es originario de Inglaterra, actualmente diversas cerveceras mexicanas lo producen. Se caracteriza por ser sumamente oscura casi negra, bien tostada y con un gran porcentaje de alcohol. En nariz se perciben aromas a café y chocolate.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/cerveza3.png' %}" alt="fotocerveza3" data-bs-toggle="modal"
+        data-bs-target="#modalCerveza3">
+        <div class="carousel-caption">
+          <h3></h3>
+          <p>American Amber Ale es un estilo de cerveza de alta fermentación, de color ámbar y de origen norteamericano. Es conocida también en EEUU como Red Ale y, en realidad, vendría a ser la versión americana de las Belgian Amber Ale.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+ 
+
+</div>
+
+
+
+
+
+    </section>
+
+
+    <section id="Nosotros" class="content about">
+
+        <h2 class="title">Nosotros</h2>
+        <p>Nuestra Tienda:
+            Somos una tienda en casa blanca dedicada exclusivamente a la venta de cervezas artesanales propias. Tenemos
+            cerca de 6 cervezas distintas, de muy buena calidad
+            por ahora solo contamos con 3 tipos de cervezas a la venta y otras 3 en produccion. Por el momento somos una
+            tienda física, se hacen ventas presencialmente con el cliente cuando visita nuestro local y se hacen
+            entregas en el plan del gran valparaiso,
+            por ahora solo se reservan compras via whatsapp y por instagram.
+            Queremos expandir nuestras ventas a más personas que aún no conocen nuestro local, llegar a hacer repartos
+            tanto dentro de la ciudad como a otras ciudades,
+            en todo Chile. Ubicados en km 3 Hacienda lo orozco,Casablanca como casa principal y tambien en el plan de
+            valparaiso como lugar de entrega, Cervezeria Rustica.<br>
+            <br>Nuestra Historia:
+            Nuestro local fue fundado a fines de octubre de 2022. Los dueños somos Gonzalo y Andrea una pareja de dos
+            Ingenieros Agrónomos que se conocieron estudiando Agronomía en Valdivia
+            y donde también nació el amor por las cervezas.
+            Hasta la actualidad ya hemos sido reconocidos por el público de Casa blanca y Valparaiso, teniendo muchos
+            clientes que vuelven a ir todas las semanas, además fuimos beneficiarios de un fondo
+            Crece de Sercotec y aparecimos en un reportaje del diario El mercurio.<br>
+            <br>Nuestra Misión:
+            Somos la única tienda en la V region dedicada exclusivamente a la venta de cervezas artesanales en botella y
+            la única con la más alta calidad en la región.
+            Nuestro objetivo es ofrecer la mejor cerveza que se adecué al gusto del cliente mediante una gran variedad y
+            estilos junto a una orientación personalizada.
+            Privilegiamos la calidad de la cerveza ante todo y así poder recomendarla tranquilamente,
+            esto se respalda en base a recomendaciones de personas en el mismo rubro. Además se orienta al cliente en
+            base a lo que busca desde la cerveza más ligera,
+            hasta la cerveza más amarga o con más grados alcohólicos.<br>
+        </p>
+
+
+
+
+
+    </section>
+
+    <section id="Valores" class="content price">
+
+        <article class="contai">
+            <h2 class="title">Valores</h2>
+            <p>Los valores unicos hasta ahora, se reflejan por lo nueva que es la empresa, prontamente se distribuiran
+                mas tipos de cervezas y mas variedad de tamaños
+            </p>
+
+            <a href="#" class="boton valores">Valores: $1500 pesos la unidad (350 cc), Precio x Mayor sobre las 12
+                botellas </a>
+
+
+        </article>
+
+
+    </section>
+
+    <section id="Contacto" class="content contact">
+        <h2 class="title">Contacto</h2>
+        <i class="bi bi-instagram">cvza.rustica</i>
+        <br>
+        <i class="bi bi-envelope">Correo:cvza.rustica@gmail.com</i>
+        <br>
+        <i class="bi bi-whatsapp">+569470283</i>
+
+         <title>Formulario de Reclamos</title>
+</head>
+<body>
+    <h1 class="title">reclamos</h1>
+  
+  <a href="reclamo.html" class="boton-reclamo">Reclamos</a>
+  
+
+
+        <figure class="map">
+            
+
+        </figure>
+        <h2 class="title">Direcion Tienda Rustica</h2>
+        <div id="map"></div>
+      
+        <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+        <script>
+          // Coordenadas de la ubicación de la tienda
+          var tiendaLocation = [-33.308641, -71.410386];
+      
+          // Crea el mapa y muestra la ubicación de la tienda
+          var map = L.map('map').setView(tiendaLocation, 14);
+      
+          // Agrega el mapa base de OpenStreetMap
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+          }).addTo(map);
+      
+          // Marca la ubicación de la tienda en el mapa
+          L.marker(tiendaLocation).addTo(map)
+            .bindPopup('Tienda')
+            .openPopup();
+        </script>
+
+    </section>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+
+
+html {
+    scroll-behavior: smooth;
+    background-color: #000000f6;
+  }
+body {
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin: auto;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif, sans-serif;
+    text-align: center;
+    background-color: #000;
+    background-image: url('../img/fondo.webp');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+
+  .sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+
+.wooden-footer {
+    background-color: #2e2112; /* Color hexadecimal que se asemeja a la madera */
+    color: #fff; /* Color del texto en el footer */
+    padding: 20px; /* Espaciado interno del footer */
+  }
+
+.wooden-title {
+    color: #9e6723; /* Color hexadecimal que se asemeja a la madera */
+  }
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh !important;
+    background-image: url('../img/fondo.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background-color: rgb(5, 5, 1);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+  .logo {
+    margin-left: 30px;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: rgb(232, 236, 240);
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  
+  .Nombrelogo {
+    color: azure;
+    margin-left: -74%;
+    margin-top: 32px;
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 27px;
+  }
+  
+  .logo img {
+    height: 50px;
+    filter: invert();
+  }
+  .navbar {
+    display: flex;
+    color: #f68900;
+    margin-left: 100px;
+  }
+  
+  
+  .navbar a {
+    display: block;
+    padding: 20px 20px;
+    color: #f68900;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  
+  .navbar a:hover {
+    background-color: rgb(7, 7, 7);
+    border: 2px solid #f68900;
+  }
+
+  .title {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgb(249, 253, 253);
+}
+
+html p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: rgb(240, 236, 236);
+    padding: 0 100px;
+}
+
+.btn-orange {
+  color: #070707;
+  background-color: #ff8800;
+  border-color: #ff8800;
+}
+
+.btn-orange:hover {
+  color: #fff;
+  background-color: #ff6600;
+  border-color: #ff6600;
+}
+.card-color {
+  width: 18rem;
+  background-color:rgba(34, 34, 34, 0.4);
+  color:#fd8e10;
+}

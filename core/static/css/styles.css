@@ -1,0 +1,246 @@
+html {
+    scroll-behavior: smooth;
+    background-color: #000000f6;
+  }
+  
+  .boton-reclamo {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f68900;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .boton-reclamo:hover {
+    background-color: #f68900;
+  }
+  
+  #map {
+    height: 50%;
+    width: 50%;
+  }
+  
+
+   
+.bi-envelope {
+    color: #99b1b9;
+}
+
+.bi-instagram {
+    color: #9c99b9;
+}
+.bi-whatsapp {
+    color: #9c99b9;
+}
+
+.bi-person-circle {
+    color :#f68900
+}
+
+
+
+.boton {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #f68900;
+    color: rgb(244, 245, 247);
+    
+    background: #f68900;
+
+}
+.boton a{
+    text-decoration: none;
+    color: white;
+}
+
+.boton:hover {
+    background: none;
+}
+
+.btn-home {
+    display: flex;
+}
+
+.btn-home a {
+    margin: 0 10px;
+}
+
+.content {
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sau {
+    padding: 30px;
+    background-color: #1f1d1d;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: aliceblue;
+
+}
+
+.box-container .box {
+    height: 43rem;
+    width: 14rem;
+    background-color: rgb(22, 20, 20);
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 5rem rgba(2, 2, 2, 0.5);
+    margin: 2rem;
+
+
+
+}
+
+.box-container .box i {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    color: rgb(12, 12, 12);
+    background: #f68900;
+    font-size: 2rem;
+    margin: 1rem 0;
+
+
+}
+
+.box-container .box h3 {
+    font-size: 20px;
+    color: #f68900;
+
+
+}
+
+.box-container.box p {
+    padding: 0 5px;
+
+
+
+}
+
+.about {
+    background: #1f1d1d;
+
+}
+
+.price {
+    background-image: url("{% static 'img/fondo.jpg' %}");
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+
+}
+
+.contact {
+    padding-top: 20px;
+    background-color: #1f1d1d;
+    padding-bottom: 0;
+
+}
+
+.icono {
+    color: white;
+}
+
+.enlace {
+    color: white;
+}
+
+.boton {
+
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    color: white;
+
+}
+
+.formulario-login {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.formulario-login table {
+    align-content: center;
+    margin: auto;
+    display: left;
+
+}
+.formulario-login td {
+    text-align: left;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #000;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #030303;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal img {
+    max-width: 100%;
+    max-height: 80vh;
+    margin-top: 10px;
+}
+
+
+.carousel-item{
+    color: red; /* Cambia el color a tu preferencia */
+}
+
+
+#modalCervezaLabel,
+.modal-body h3,
+p {
+    color: black;
+}
+
+.user-container {
+    background-color: rgba(252, 153, 6, 0.788);
+    color: #442C2E;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .user-info {
+    margin-top: 10px;
+    color: #000;
+  }

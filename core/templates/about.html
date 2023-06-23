@@ -1,0 +1,220 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>Rustica</title>
+    <link rel="stylesheet" href="{% static 'css/general.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/icono.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+    
+    <script src="{% static 'js/script.js' %}"></script>
+    
+    
+    
+</head>
+  
+<body class="fondo">
+
+  {% block content %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+    <h1></h1>
+    <div class="head">
+
+        <div class="logo">
+            <table>
+                <tr>
+                    <td><a href="#"><img src="{% static 'img/logo2.png' %}" height="100%" width="100%" alt="logonumero2"></a></td>
+                    <td >
+                        <p class="Nombrelogo">Rustica</p>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+
+        <nav class="navbar">
+          <a href="{% url 'home' %}">Inicio</a>
+          <a href="{% url 'products' %}">Catalogo</a>
+          <a class="bi bi-person-circle" href="{% url 'perfil' %}"></a>
+          {% if request.user.is_authenticated %}
+          <a href="{% url 'exit' %}"> Salir</a>
+          {% else %}
+          <a href="{% url 'login' %}"> Acceder</a>
+          {% endif %}
+      </nav>
+    </div>
+
+    <br>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section id="Nosotros" class="content about">
+
+      <h2 class="title">Nosotros</h2>
+      <p>Nuestra Tienda:
+          Somos una tienda en casa blanca dedicada exclusivamente a la venta de cervezas artesanales propias. Tenemos
+          cerca de 6 cervezas distintas, de muy buena calidad
+          por ahora solo contamos con 3 tipos de cervezas a la venta y otras 3 en produccion. Por el momento somos una
+          tienda física, se hacen ventas presencialmente con el cliente cuando visita nuestro local y se hacen
+          entregas en el plan del gran valparaiso,
+          por ahora solo se reservan compras via whatsapp y por instagram.
+          Queremos expandir nuestras ventas a más personas que aún no conocen nuestro local, llegar a hacer repartos
+          tanto dentro de la ciudad como a otras ciudades,
+          en todo Chile. Ubicados en km 3 Hacienda lo orozco,Casablanca como casa principal y tambien en el plan de
+          valparaiso como lugar de entrega, Cervezeria Rustica.<br>
+          <br>Nuestra Historia:
+          Nuestro local fue fundado a fines de octubre de 2022. Los dueños somos Gonzalo y Andrea una pareja de dos
+          Ingenieros Agrónomos que se conocieron estudiando Agronomía en Valdivia
+          y donde también nació el amor por las cervezas.
+          Hasta la actualidad ya hemos sido reconocidos por el público de Casa blanca y Valparaiso, teniendo muchos
+          clientes que vuelven a ir todas las semanas, además fuimos beneficiarios de un fondo
+          Crece de Sercotec y aparecimos en un reportaje del diario El mercurio.<br>
+          <br>Nuestra Misión:
+          Somos la única tienda en la V region dedicada exclusivamente a la venta de cervezas artesanales en botella y
+          la única con la más alta calidad en la región.
+          Nuestro objetivo es ofrecer la mejor cerveza que se adecué al gusto del cliente mediante una gran variedad y
+          estilos junto a una orientación personalizada.
+          Privilegiamos la calidad de la cerveza ante todo y así poder recomendarla tranquilamente,
+          esto se respalda en base a recomendaciones de personas en el mismo rubro. Además se orienta al cliente en
+          base a lo que busca desde la cerveza más ligera,
+          hasta la cerveza más amarga o con más grados alcohólicos.<br>
+      </p>
+  </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    {% endblock %}
+</body>
+
+<footer>
+  <div class="wooden-footer py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4 class="text-center mb-4 wooden-title">Contacto</h4>
+          <p><i class="bi bi-instagram"></i> cvza.rustica</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-center mb-4 wooden-title">Correo</h4>
+          <p><i class="bi bi-envelope"></i> cvza.rustica@gmail.com</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-center mb-4 wooden-title">WhatsApp</h4>
+          <p><i class="bi bi-whatsapp"></i> +569470283</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <button class="btn btn-orange" onclick="window.location.href='{% url 'about' %}'">Nosotros</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</html>
