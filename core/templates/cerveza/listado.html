@@ -15,7 +15,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
-    
     <script src="{% static 'js/script.js' %}"></script>
     
     
@@ -59,101 +58,47 @@
 
     <br>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p> owo
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br>  
+    <br>
+    <br>
+    <br>
+    <br>
+      <h1>Listado de Producto</h1>
+      <a class="btn btn-orange" href="{% url 'crear' %}"> Añadir Nueva Cerveza</a>
+      <br>
+      <div style="display: flex; justify-content: center;">
+        <table class="table table-striped card-color table-margin"> 
+          <thead>
+            <tr>
+              <th scope="col">Cerveza</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">Precio</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for producto in productos %}
+            <tr>
+              <td>
+                <img src="{{producto.imagen.url}}" height="400"/>
+              </td>
+              <td>{{producto.nombre}}</td>
+              <td>{{producto.descripcion}}</td>
+              <td>${{producto.precio}}</td>
+              <td>
+                <a href="{% url 'editar_id' producto.id %}" class="btn btn-orange">Editar</a>
+                 <br>
+                 <a href="{% url 'eliminar' producto.id %}" class="btn btn-orange">Eliminar</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table> 
+    </div> 
+        <br>
+        <br>
+        <br>  
     <br>
     <br>
     <br>
@@ -187,3 +132,4 @@
   </div>
 </footer>
 </html>
+

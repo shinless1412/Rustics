@@ -5,7 +5,10 @@ from .forms import CustomUserCreationForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from .models import Producto
-from core.Carrito import Carrito
+from core.Carrito import Carrito    
+from .forms import CervezaForm
+from django.shortcuts import get_object_or_404
+from django.contrib.auth.decorators import user_passes_test
 
 # Create your views here.
 
@@ -16,6 +19,14 @@ def home(request):
 def products(request):
     productos = Producto.objects.all()
     return render(request, 'products.html', {'productos':productos})
+
+
+@user_passes_test(lambda u: u.is_superuser)
+def listado(request):
+    productos = Producto.objects.all()
+    print(listado)
+    return render(request, 'cerveza/listado.html', {'productos':productos})
+
 
 def agregar_producto(request, producto_id):
     carrito = Carrito(request)
@@ -47,6 +58,7 @@ def about(request):
 def exit(request):
     logout(request)
     return redirect('home')
+
 def register(request):
     data = {
         'form': CustomUserCreationForm()
@@ -60,3 +72,40 @@ def register(request):
             login(request, user)
             return redirect('home')
     return render(request, 'registration/register.html',data)
+
+
+@user_passes_test(lambda u: u.is_superuser)
+def crear(request):
+    if request.method == 'POST':
+        formulario = CervezaForm(request.POST, request.FILES)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('listado')
+    else:       
+        formulario = CervezaForm()
+    
+    return render(request, 'cerveza/crear.html', {'formulario': formulario})
+
+@user_passes_test(lambda u: u.is_superuser)
+def editar(request, id=None):
+    if id:
+        producto = get_object_or_404(Producto, id=id)
+    else:
+        producto = None
+
+    if request.method == 'POST':
+        formulario = CervezaForm(request.POST, request.FILES, instance=producto)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('listado')
+    else:
+        formulario = CervezaForm(instance=producto)
+
+    return render(request, 'cerveza/editar.html', {'formulario': formulario})
+
+
+@user_passes_test(lambda u: u.is_superuser)
+def eliminar(request, id):
+    producto = Producto.objects.get(id=id)
+    producto.delete()
+    return redirect("listado")

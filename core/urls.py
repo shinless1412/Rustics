@@ -16,6 +16,9 @@ Including another URLconf
 """
 from django.urls import path
 from .views import home,products,perfil,exit,register,about,agregar_producto,restar_producto,eliminar_producto,limpiar_carrito
+from .views import crear,listado,editar,eliminar
+
+
 
 from django.conf import settings
 from django.contrib.staticfiles.urls import static
@@ -28,7 +31,17 @@ urlpatterns = [
     path('register/', register , name='register'),
     path('about/', about , name='about'),
     path('agregar/<int:producto_id>/', agregar_producto, name="Add"),
-    path('eliminar/<int:producto_id>/', eliminar_producto, name="Del"),
+ #   path('eliminar/<int:producto_id>/', eliminar_producto, name="Del"),
     path('restar/<int:producto_id>/', restar_producto, name="Sub"),
     path('limpiar/', limpiar_carrito, name="CLS"),
+
+    path('cerveza/crear', crear, name='crear'),
+    path('listado/', listado, name='listado'),
+    path('cerveza/editar/', editar, name='editar'),
+    path('cerveza/editar/<int:id>/', editar, name='editar_id'),
+    path('eliminar/<int:id>/', eliminar, name='eliminar'),
+
+
+
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
