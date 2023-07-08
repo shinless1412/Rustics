@@ -17,6 +17,9 @@ Including another URLconf
 from django.urls import path
 from .views import home,products,perfil,exit,register,about,agregar_producto,restar_producto,eliminar_producto,limpiar_carrito
 from .views import crear,listado,editar,eliminar
+from . import views
+
+
 
 
 
@@ -40,8 +43,8 @@ urlpatterns = [
     path('cerveza/editar/', editar, name='editar'),
     path('cerveza/editar/<int:id>/', editar, name='editar_id'),
     path('eliminar/<int:id>/', eliminar, name='eliminar'),
-
-
+    path('reviews/<int:producto_id>/', views.lista_reviews, name='lista_reviews'),
+    path('reviews/<int:review_id>/eliminar/', views.eliminar_review, name='eliminar_review'),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

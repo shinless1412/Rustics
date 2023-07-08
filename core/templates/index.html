@@ -11,11 +11,12 @@
     <title>Rustica</title>
     <link rel="stylesheet" href="{% static 'css/general.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/advertencia.css' %}">
     <link rel="shortcut icon" href="{% static 'img/icono.png' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
-    
+    <script src="{% static 'js/advertencia.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
     
     
@@ -55,6 +56,15 @@
             <a href="{% url 'login' %}"> Acceder</a>
             {% endif %}
         </nav>
+    </div>
+
+    <div id="pantalla-emergente" class="pantalla-emergente">
+      <div class="contenido">
+        <h2>¿Usted es Mayor de edad?</h2>
+        <p>Si ustedes mayor de edad apretar el boton confirmar.</p>
+        <p>de lo contrario retirse de la pagina.</p>
+        <button onclick="confirmarAccion()" class="btn btn-success">Confirmar</button>
+      </div>
     </div>
 
     <header class="content header">

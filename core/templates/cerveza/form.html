@@ -23,6 +23,6 @@
     </div>
     <div class="col-12 help-text">  {{campo.errors}} </div> 
     {% endfor%}
-    <input name="" id="" class="btn btn-success" type="submit" value="Enviar Informacion">
+    <input name="" id="" class="btn btn-success" onclick="confirmarAccion(event)" type="submit" value="Enviar Informacion">
     <a class="btn btn-orange" href="{% url 'listado' %}">Cancelar</a>
 </form> 

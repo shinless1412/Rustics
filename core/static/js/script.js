@@ -48,3 +48,24 @@ function actualizarCarrito() {
   // Mostrar total
   totalCarrito.textContent = total;
 }
+
+
+$(document).ready(function() {
+  $('.rating i').click(function() {
+    var rating = $(this).data('rating');
+    $('#rating-input').val(rating);
+
+    $('.rating i').removeClass('fas').addClass('far');
+    $(this).prevAll('i').addBack().removeClass('far').addClass('fas');
+  });
+
+  $('#create-review-form').submit(function(event) {
+    event.preventDefault();
+
+    // Aquí puedes realizar la lógica para enviar la review al servidor
+    var comment = $('#comment').val();
+    var rating = $('#rating-input').val();
+
+    // ... Código para enviar la review ...
+  });
+});

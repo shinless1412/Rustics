@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .models import Producto
+from .models import Review
 
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
@@ -13,3 +14,8 @@ class CervezaForm(forms.ModelForm):
         model = Producto
         fields = '__all__'
         
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['contenido', 'puntuacion']
+

@@ -86,6 +86,9 @@
               <td>{{producto.descripcion}}</td>
               <td>${{producto.precio}}</td>
               <td><a href="{% url 'Add' producto.id %}" class="btn btn-orange bi bi-cart">Agregar</a></td>
+              <td>
+                <a href="{% url 'lista_reviews' producto_id=producto.id %}" class="ver-reseñas">Ver Reseñas</a>
+              </td>              
             </tr>
             {% endfor %}
           </tbody>

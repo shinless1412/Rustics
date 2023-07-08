@@ -131,3 +131,7 @@ html p {
   background-color:rgba(34, 34, 34, 0.4);
   color:#fd8e10;
 }
+.text-color {
+  width: 18rem;
+  color:#fd8e10;
+}

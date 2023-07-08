@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
     <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/confirmar.js' %}"></script>
     
     
     
@@ -89,7 +90,7 @@
               <td>
                 <a href="{% url 'editar_id' producto.id %}" class="btn btn-orange">Editar</a>
                  <br>
-                 <a href="{% url 'eliminar' producto.id %}" class="btn btn-orange">Eliminar</a>
+                 <a href="{% url 'eliminar' producto.id %}" class="btn btn-orange" onclick="confirmarAccion(event)">Eliminar</a>
               </td>
             </tr>
             {% endfor %}

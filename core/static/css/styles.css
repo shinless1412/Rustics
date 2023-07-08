@@ -22,7 +22,20 @@ html {
     width: 50%;
   }
   
-
+  .rating {
+    display: inline-block;
+    color: #888;
+  }
+  
+  .star {
+    cursor: pointer;
+  }
+  
+  .star:hover,
+  .star.selected {
+    color: gold;
+  }
+  
    
 .bi-envelope {
     color: #99b1b9;

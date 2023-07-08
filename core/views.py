@@ -9,13 +9,15 @@ from core.Carrito import Carrito
 from .forms import CervezaForm
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.decorators import user_passes_test
-
+from django.http import HttpResponseNotAllowed, JsonResponse
+from .models import Review
+from .forms import ReviewForm
 # Create your views here.
 
 def home(request):
     return render(request, 'index.html')
 
-@login_required
+
 def products(request):
     productos = Producto.objects.all()
     return render(request, 'products.html', {'productos':productos})
@@ -109,3 +111,27 @@ def eliminar(request, id):
     producto = Producto.objects.get(id=id)
     producto.delete()
     return redirect("listado")
+
+@login_required
+def lista_reviews(request, producto_id):
+    producto = get_object_or_404(Producto, pk=producto_id)
+    reviews = Review.objects.filter(producto=producto)  # Filtrar las reviews por producto
+    form = ReviewForm()
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user
+            review.producto = producto  # Asignar el producto a la review
+            review.save()
+            return redirect('lista_reviews', producto_id=producto_id)
+    return render(request, 'lista_reviews.html', {'producto': producto, 'reviews': reviews, 'form': form})
+
+@login_required
+def eliminar_review(request, review_id):
+    review = get_object_or_404(Review, pk=review_id)
+    if request.method == 'POST':
+        review.delete()
+        return redirect('lista_reviews', producto_id=review.producto_id)
+    else:
+        return HttpResponseNotAllowed(['POST'])
